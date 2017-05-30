@@ -1,7 +1,8 @@
 #!/bin/sh
 
-if [ -n $ID_RSA_FILE ] then
-	ssh-add $ID_RSA_FILE
+if [ -n $ID_RSA_FILE ] 
+then
+	cp $ID_RSA_FILE ~/.ssh/id_rsa
 fi
 
-exec "$@"
+sh -c "$@"
