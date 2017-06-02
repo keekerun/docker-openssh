@@ -19,7 +19,8 @@ fi
 
 if [ ! -z $ID_RSA_FILE ]; then
 	cp $ID_RSA_FILE ~/.ssh/id_rsa
-	chmod 400 ~/.ssh/id_rsa
+	chown root:root ~/.ssh/id_rsa
+	chmod 600 ~/.ssh/id_rsa
 fi
 
 if [ -z "$@" ]; then
