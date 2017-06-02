@@ -38,7 +38,7 @@ RUN set -ex; \
   	echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config; \
   	echo -e "Host gitlab.itnap.ru\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY docker-openssh-entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["docker-openssh-entrypoint.sh"]
 CMD ["sh"]
