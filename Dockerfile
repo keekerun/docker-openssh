@@ -1,9 +1,8 @@
-FROM alpine:3.6
+FROM alpine:latest
 
 LABEL version="1.1"
 LABEL description="Обрaаз docker с ипортом ключа rsa"
-
-MAINTAINER Aleksey Gulyaev "ag@napoleonit.ru"
+LABEL maintainer="Aleksey Gulyaev <ag@napoleonit.ru>"
 
 RUN apk add --no-cache \
 		ca-certificates
